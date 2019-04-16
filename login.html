@@ -49,7 +49,7 @@
                         <label>
                             Email Address<span class="req">*</span>
                         </label>
-                        <input type="email" name="email" autocomplete="off"/>
+                        <input type="text" id="signupmail" name="email" autocomplete="off"/>
                         <p id="emailerror" class="errors"></p>
                     </div>
 
@@ -76,14 +76,14 @@
                         <label>
                             Email Address<span class="req">*</span>
                         </label>
-                        <input type="email"required autocomplete="off"/>
+                        <input type="email" id="email" autocomplete="off"/>
                     </div>
 
                     <div class="field-wrap">
                         <label>
                             Password<span class="req">*</span>
                         </label>
-                        <input type="password" required autocomplete="off"/>
+                        <input type="password" id="pass" autocomplete="off"/>
                         <p id="password-errors"></p>
                     </div>
 
@@ -180,8 +180,10 @@
 
         var a=namevalidate();
         var b=lnamevalidate();
+        var c=emailvalidate();
+        var d=passwordvalidate();
 
-        return (a&&b);
+        return (a&&b&&c&&d);
 
     }
 
@@ -264,8 +266,36 @@
     }
 
     function emailvalidate() {
-        return true;
+        var a=document.getElementById('signupmail').value;
+        var check1=a.indexOf('@');
+        var check2=a.lastIndexOf('.');
+        if(check1<0){
+            document.getElementById('emailerror').innerHTML="Please enter a valid email";
+            return false;
+        }
+        else if(check2<check1){
+            document.getElementById('emailerror').innerHTML="Please enter a valid email";
+            return false
+        }
+
+        else{
+            document.getElementById('emailerror').innerHTML="";
+            return true;
+        }
     }
+
+    function passwordvalidate() {
+        if(document.SignUp.password.value.length<5){
+            document.getElementById('passerror').innerHTML="Password should be 6 or more character long";
+            return false;
+        }
+        else {
+            return true;
+        }
+
+    }
+
+
 </script>
 </body>
 </html>

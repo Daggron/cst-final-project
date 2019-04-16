@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travelista</title>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/parallax.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Lobster|" rel="stylesheet">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<header>
+    <div id="logo">
+        <div id="align-left">
+
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li>
+                <a href="">Home</a>
+            </li>
+            <li>
+                <a href="">About</a>
+            </li>
+            <li>
+                <a href="">Places</a>
+            </li>
+            <li>
+                <a href="">Books</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<section id="home-page">
+    <div id="home">
+        <div id="home-image">
+            <img src="./images/amsterdam-1150319_1920.jpg">
+            <svg viewBox="0 0 960 300">
+                <symbol id="s-text">
+                    <text text-anchor="middle" x="50%" y="80%">Travelista</text>
+                </symbol>
+
+                <g class = "g-ants">
+                    <use xlink:href="#s-text" class="text-copy"></use>
+                    <use xlink:href="#s-text" class="text-copy"></use>
+                    <use xlink:href="#s-text" class="text-copy"></use>
+                    <use xlink:href="#s-text" class="text-copy"></use>
+                    <use xlink:href="#s-text" class="text-copy"></use>
+                    <use xlink:href="#s-text" class="text-copy"></use>
+                </g>
+            </svg>
+        </div>
+        <div class="center-text">
+            <h1><span class="spunkytext">We Lo</span><span class="funkytext">ve to tr</span><span class="spunkytext">avel</span></h1>
+        </div>
+
+    </div>
+</section>
+
+
+
+<section id="catalouge">
+    <div class="conatiner">
+
+        <div class="text-center" data-aos="fade-up" data-aos-duration="2000">
+            <h1><span class="spunkytext"> We are tra</span><span class="funkytext">velista</span> </h1>
+        </div>
+
+        <div class="text-image-container">
+            <div class="image-container" id="scene">
+                <div class="layer" data-depth="1">
+                <img src="./images/paris.png" data-aos="fade-up" data-aos-duration="1500">
+                </div>
+            </div>
+            <div class="text-container">
+                <div class="text">
+                    <p data-aos="fade-up" data-aos-duration="2000">We are travelista a travelling company that make your all the plans toward a successful holiday.
+                    A good time spend in life is one of the blessings that everyone wants to have in the life .
+                    We as a compnay find its our duty to make people travel around the globe to discover the undiscover to  find the places hidden around the world to change the whatsapp status and hashtags.<br>Pack up ladies and gentlemen we will will rock you.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<section id="video-demo">
+    <div class="conatiner">
+  <div id="triangle">
+  </div>
+    <div id="float-text">
+        <div id="center">
+            <div id="floatingtext"  data-aos="fade-up" data-aos-duration="2000">
+            <h1 class="layer" data-depth="2"><span >travel</span></h1>
+            </div>
+        </div>
+    </div>
+    <div id="video-container" >
+        <div id="o">
+            <div id="video-box">
+                <video loop id="video" autoplay>
+                    <source src="./images/banner2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<script>
+    document.getElementById('video').play();
+</script>
+</body>
+<script>
+    AOS.init();
+    var scene = document.getElementById('scene');
+    var parallax = new Parallax(scene);
+
+
+    var text = document.getElementById('floatingtext');
+    var parallex = new Parallax(text);
+
+
+</script>
+</html>
