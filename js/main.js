@@ -15,3 +15,4 @@ function change() {
 
 document.getElementsByTagName('video')[0].play();
 document.getElementById('video').play();
+
