@@ -13,6 +13,10 @@ function change() {
 }
 
 
-document.getElementsByTagName('video')[0].play();
-document.getElementById('video').play();
+
+let  x= new Date();
+let year = x.getFullYear();
+year=year+"";
+document.getElementById('year').innerHTML='<h1> '+year+' </h1>';
+
 
