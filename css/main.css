@@ -1470,7 +1470,10 @@ footer{
 
 #tour-timeline{
     height: 340vh;
+    border: 1px solid transparent;
 }
+
+
 
 .timeline-conatiner{
     font: normal 16px/1.5 'Titillium Web', sans-serif;
@@ -1779,4 +1782,94 @@ footer{
     background: #EF2F3C;
     -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+
+
+
+
+@media all and (min-width: 1500px ){
+
+    #tour-timeline{
+        height: 280vh;
+    }
+}
+
+
+#book-flights{
+    height: 100vh;
+
+}
+
+
+#form{
+    width: 100vw;
+    height: 200vh;
+    border: 1px solid palevioletred;
+    background: linear-gradient(54deg, #9164ff, #8bfff4);
+    color: white;
+}
+
+
+#center-form{
+    width: 40%;
+    height: auto;
+    margin: auto;
+    background: linear-gradient(110deg, #CC008A, #FFCE00);
+
+}
+
+.form-content{
+    width: 100%;
+    border:  1px solid purple;
+    min-height: 400px;
+}
+
+.inbox{
+    width: 50%;
+    float: left;
+}
+
+label{
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+input[type='text'],input[type='number']{
+    height: 50px;
+    width: 250px;
+    font-size: 20px;
+    color: #e6891d;
+    border: none;
+    border-radius: 10px;
+}
+
+input[type=radio]{
+    margin-top: 10px;
+    height: 20px;
+    width: 40px;
+    color: #e6891d;
+}
+input[type=submit]{
+    height: 50px;
+    width: 250px;
+    border: none;
+    border-radius:10px ;
+    background: #FFCE00;
+    box-shadow: 3px 3px 5px 5px rgba(0,0,0,0.3);
+    transition: 1s;
+    color: white;
+}
+
+input[type=submit]:hover{
+    box-shadow: none;
+    transition: 1s;
+    background: #840037;
+}
+
+
+#submit-wala-link{
+    width: 250px;
+    margin-left: 30%;
 }

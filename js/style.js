@@ -1,4 +1,5 @@
 
+console.log(window.innerWidth);
 
     var items = document.querySelectorAll(".timeline li");
 
@@ -28,8 +29,22 @@
 
 
 
-
     function additional() {
+        var listCode='';
         var count=document.getElementById('members').value;
+        for (var i = 0; i < count; i++) {
+            var listID = 'list_' + i.toString();
+            var divID = 'div_' + i.toString();
+            listCode +='<div><label>Name:</label><br> <input type= "text" name="members_name" placeholder="Members Name"/> <label>Age:</label><input type= "text" name="members_name" placeholder="Members Age"/> </div>';
+        }
+        document.getElementById('additional-members').innerHTML = listCode;
+        document.getElementById('book-flights').style.height=(100+count*10)+"vh";
+
+
+    }
+
+
+    function focus_grab() {
+        document.getElementById(this).style.border='3px solid #e6891d';
 
     }
