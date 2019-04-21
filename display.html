@@ -263,76 +263,144 @@
                 <p class="funkytext">Book a <span class="spunkytext">ticket & Travel </span> now</p>
             </div>
         </div>
+        <div id="form-conatiner">
+            <div id="form">
+                <div id="center-form">
+                    <form name="visiting" action="./ticket.html" method="post">
+                        <div class="form-content">
+                            <div class="inbox">
+                                <label>Name:</label>
+                                <input type="text" id="name_of" onblur="throw_name()" name="Pname" placeholder="John Wick" onfocus="focus_grab()">
+                                <br>
+                                <p id="name-error" class="errors"></p>
+                            </div>
+                            <div class="inbox">
+                                <label>Email:</label>
+                                <input type="text" name="email" onfocus="focus_grab()" placeholder="Someone@gmail.com">
+                                <br>
+                                <p id="email-error" class="errors"></p>
+                            </div>
+                            <div class="inbox">
+                                <label>Phone:</label>
+                                <input type="text" name="phone" onfocus="focus_grab()" placeholder="Someone@gmail.com">
+                                <br>
+                                <p id="phone-error" class="errors"></p>
+                            </div>
+                            <div class="inbox">
+                                <label>Gender:</label>
+                                <input type="radio" name="gender" value="male">&nbsp;Male
+                                <br>
+                                <input type="radio" name="gender" value="female">&nbsp;Female
+                                <br>
+                                <input type="radio" name="gender" value="female">&nbsp;Rather Not Say
+                                <p id="gender-errors" class="errors"></p>
+                            </div>
+                            <div class="inbox">
+                                <label>Age:</label>
+                                <input type="text" name="age" onfocus="focus_grab()" placeholder="Enter Age Here">
+                                <br>
+                                <p id="age-error" class="errors"></p>
+                            </div>
 
-        <div id="form">
-            <div id="center-form">
-                <form name="visiting" action="#javascript;" method="post">
-                    <div class="form-content">
-                        <div class="inbox">
-                            <label>Name:</label>
-                            <input type="text" name="Pname" placeholder="John Wick" onfocus="focus_grab()">
-                            <br>
-                            <p id="name-error" class="errors"></p>
-                        </div>
-                        <div class="inbox">
-                            <label>Email:</label>
-                            <input type="text" name="email" onfocus="focus_grab()" placeholder="Someone@gmail.com">
-                            <br>
-                            <p id="email-error" class="errors"></p>
-                        </div>
-                        <div class="inbox">
-                            <label>Phone:</label>
-                            <input type="text" name="phone" onfocus="focus_grab()" placeholder="Someone@gmail.com">
-                            <br>
-                            <p id="phone-error" class="errors"></p>
-                        </div>
-                        <div class="inbox">
-                            <label>Gender:</label>
-                            <input type="radio" name="gender" value="male">&nbsp;Male
-                            <br>
-                            <input type="radio" name="gender" value="female">&nbsp;Female
-                            <br>
-                            <input type="radio" name="gender" value="female">&nbsp;Rather Not Say
-                            <p id="gender-errors" class="errors"></p>
-                        </div>
-                        <div class="inbox">
-                            <label>Age:</label>
-                            <input type="text" name="age" onfocus="focus_grab()" placeholder="Enter Age Here">
-                            <br>
-                            <p id="age-error" class="errors"></p>
-                        </div>
-
-                        <div class="inbox">
-                            <label>Members:</label>
-                            <input type="number" id="members" onfocus="focus_grab()" onblur="additional()" name="members" placeholder="1-20">
-                            <br>
-                            <p id="members-error" class="errors"></p>
-                        </div>
+                            <div class="inbox">
+                                <label>Members:</label>
+                                <input type="number" id="members" onfocus="focus_grab()" onblur="additional()"
+                                       name="members" placeholder="1-20">
+                                <br>
+                                <p id="members-error" class="errors"></p>
+                            </div>
                             <div id="additional-members">
 
                             </div>
 
-                        <div id="submit-wala-link" class="inbox">
-                            <input type="submit"  value="Submit">
+                            <div id="full-box">
+                                <div class="flight-option">
+                                    <select name="flight">
+                                        <option>
+                                            9 May,2019
+                                        </option>
+                                        <option>
+                                            15 May,2019
+                                        </option>
+                                        <option>
+                                            16 May,2019
+                                        </option>
+                                        <option>
+                                            17 May,2019
+                                        </option>
+                                        <option>
+                                            18 May,2019
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="flight-option">
+                                    <select name="flight">
+                                        <option>
+                                            Boeing 747
+                                        </option>
+                                        <option>
+                                            SkyPalace 234
+                                        </option>
+                                        <option>
+                                            StrikaJet 213
+                                        </option>
+                                        <option>
+                                            Winget 23
+                                        </option>
+                                        <option>
+                                            Queenjet 201
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="flight-option">
+                                    <select name="flight">
+                                        <option>
+                                            5:45 P.M. Business
+                                        </option>
+                                        <option>
+                                            6:15 P.M. Economic
+                                        </option>
+                                        <option>
+                                            12:15 P.M Business
+                                        </option>
+                                        <option>
+                                            10:45 A.M. Economics
+                                        </option>
+                                        <option>
+                                            3:30 P.M. Business
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div id="submit-wala-link" class="inbox">
+                                <input type="submit" value="Submit">
+                            </div>
+
+
                         </div>
 
-
-                    </div>
-
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
+<section id="selfiebox">
+    <div class="conatiner">
+        <div class="second-label" data-aos="fade-up" data-aos-duration="2000">
+            <div class="mid-text" data-aos="fade-up" data-aos-duration="2000">
+                <h1><span class="spunkytext">Get Rea<span class="funkytext">dy to click amazing </span>selfies</span>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+
+</section>
 
 <script src="js/style.js"></script>
-
-
-<script>
-
-
-</script>
 
 
 </body>

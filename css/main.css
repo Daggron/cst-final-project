@@ -1788,26 +1788,23 @@ footer{
 
 
 
-@media all and (min-width: 1500px ){
-
-    #tour-timeline{
-        height: 280vh;
-    }
-}
-
-
 #book-flights{
-    height: 100vh;
+    height: 150vh;
 
 }
 
-
+#form-conatiner{
+    height: 200vh;
+    border: 1px solid transparent;
+    background: linear-gradient(54deg, #9164ff, #8bfff4);
+}
 #form{
     width: 100vw;
-    height: 200vh;
-    border: 1px solid palevioletred;
-    background: linear-gradient(54deg, #9164ff, #8bfff4);
+    height: 160vh;
+    margin-top: 5%;
     color: white;
+
+
 }
 
 
@@ -1815,14 +1812,15 @@ footer{
     width: 40%;
     height: auto;
     margin: auto;
-    background: linear-gradient(110deg, #CC008A, #FFCE00);
+    background: palevioletred;
 
 }
 
 .form-content{
     width: 100%;
     border:  1px solid purple;
-    min-height: 400px;
+    min-height: 450px;
+    max-height: 1200px;
 }
 
 .inbox{
@@ -1856,7 +1854,7 @@ input[type=submit]{
     width: 250px;
     border: none;
     border-radius:10px ;
-    background: #FFCE00;
+    background: #ff8f00;
     box-shadow: 3px 3px 5px 5px rgba(0,0,0,0.3);
     transition: 1s;
     color: white;
@@ -1872,4 +1870,46 @@ input[type=submit]:hover{
 #submit-wala-link{
     width: 250px;
     margin-left: 30%;
+}
+
+#full-box{
+    width: 100%;
+}
+
+.flight-option{
+    width: 25%;
+    height: 50px;
+    float: left;
+    margin-left: 5%;
+}
+
+
+select{
+    height: 40px;
+    background: white;
+    border:none;
+    border-radius: 10px;
+}
+
+option{
+    height: 40px;
+    background: white;
+    border:none;
+    border-radius: 10px;
+    color: #f5af19;
+    font-size: 20px;
+}
+
+
+
+
+#selfiebox{
+    height: 50vh;
+}
+
+
+
+
+::placeholder{
+    color: #e6891d;
 }

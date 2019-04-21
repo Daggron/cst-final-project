@@ -38,7 +38,7 @@ console.log(window.innerWidth);
             listCode +='<div><label>Name:</label><br> <input type= "text" name="members_name" placeholder="Members Name"/> <label>Age:</label><input type= "text" name="members_name" placeholder="Members Age"/> </div>';
         }
         document.getElementById('additional-members').innerHTML = listCode;
-        document.getElementById('book-flights').style.height=(100+count*10)+"vh";
+        document.getElementById('book-flights').style.height=(150+count*10)+"vh";
 
 
     }
@@ -48,3 +48,11 @@ console.log(window.innerWidth);
         document.getElementById(this).style.border='3px solid #e6891d';
 
     }
+
+    var name;
+
+  function throw_name() {
+      window.location.replace("ticket.html");
+  }
+
+  window.onload()
