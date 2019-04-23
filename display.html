@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect/dist/core.js"></script>
 </head>
-<body>
+<body onload="retrive()">
 <header>
     <div id="logo">
         <div id="align-left">
@@ -171,7 +171,7 @@
             </div>
 
 
-            <div class="timer-container">
+            <div class="timer-container" data-aos="fade-up" data-aos-duration="2000">
 
                 <div class="balloon white">
                     <div class="star-red"></div>
@@ -266,11 +266,11 @@
         <div id="form-conatiner">
             <div id="form">
                 <div id="center-form">
-                    <form name="visiting" action="./ticket.html" method="post">
+                    <form name="visiting"  method="post">
                         <div class="form-content">
                             <div class="inbox">
                                 <label>Name:</label>
-                                <input type="text" id="name_of" onblur="throw_name()" name="Pname" placeholder="John Wick" onfocus="focus_grab()">
+                                <input type="text" id="name_of" onblur="thanos()" name="Pname" placeholder="John Wick" onfocus="retrive()">
                                 <br>
                                 <p id="name-error" class="errors"></p>
                             </div>
@@ -374,7 +374,7 @@
                             </div>
 
                             <div id="submit-wala-link" class="inbox">
-                                <input type="submit" value="Submit">
+                                <input type="button" value="Submit" onclick="thanos()">
                             </div>
 
 
@@ -431,6 +431,7 @@
         .start();
 
 </script>
+<script src="./js/localStroge.js"></script>
 
 <script>
     AOS.init();

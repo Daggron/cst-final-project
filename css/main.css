@@ -1849,7 +1849,7 @@ input[type=radio]{
     width: 40px;
     color: #e6891d;
 }
-input[type=submit]{
+input[type=button]{
     height: 50px;
     width: 250px;
     border: none;
@@ -1860,7 +1860,7 @@ input[type=submit]{
     color: white;
 }
 
-input[type=submit]:hover{
+input[type=button]:hover{
     box-shadow: none;
     transition: 1s;
     background: #840037;

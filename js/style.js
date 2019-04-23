@@ -49,10 +49,6 @@ console.log(window.innerWidth);
 
     }
 
-    var name;
 
-  function throw_name() {
-      window.location.replace("ticket.html");
-  }
 
-  window.onload()
+

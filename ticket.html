@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width , initial-scale=1.0">
     <link rel="stylesheet" href="./css/ticket.css">
 </head>
-<body>
+<body onload="retrive()">
 <section id="ticket">
     <div class="box">
         <ul class="left">
@@ -59,7 +59,7 @@
                 <span class="sfo sfoslip">CGN</span>
                 <div class="sub-content">
                     <span class="watermark">Lufthansa</span>
-                    <span class="name">PASSENGER NAME<br><span id="name">Sander Passenger</span></span>
+                    <span class="name">PASSENGER NAME<br><span id="name_here">Sander Passenger</span></span>
                     <span class="flight">FLIGHT N&deg;<br><span>X3-65C3</span></span>
                     <span class="gate">GATE<br><span>11B</span></span>
                     <span class="seat">SEAT<br><span>5A</span></span>
@@ -76,5 +76,6 @@
     </div>
 </section>
 <script src="./js/style.js"></script>
+<script src="./js/localStroge.js"></script>
 </body>
 </html>
