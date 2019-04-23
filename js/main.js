@@ -8,7 +8,7 @@ function thanos() {
 }
 
 function change() {
-    window.location.replace("index.html");
+    window.location.replace("home.html");
 
 }
 

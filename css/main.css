@@ -1479,7 +1479,7 @@ footer{
     font: normal 16px/1.5 'Titillium Web', sans-serif;
     background: linear-gradient(54deg, #9164ff, #8bfff4);
     color: #3c3f64;
-    overflow-x: hidden;
+    overflow: hidden;
     padding-bottom: 50px;
 }
 
