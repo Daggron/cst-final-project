@@ -1,14 +1,14 @@
 function thanos() {
 
     setTimeout(function () {
-        window.location.replace("home.html");
+        window.location.replace("index.html");
 
     },3000)
 
 }
 
 function change() {
-    window.location.replace("home.html");
+    window.location.replace("index.html");
 
 }
 

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login-Html</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/granim.min.js"></script>
+</head>
+<body>
+<canvas id="canvas-basic"></canvas>
+<section id="loginpage">
+    <div id="particles-js"></div>
+
+    <div class="form">
+
+
+        <ul class="tab-group">
+            <li class="tab active"><a href="#signup">Sign Up</a></li>
+            <li class="tab"><a href="#login">Log In</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="signup">
+                <h1>Sign Up for Free</h1>
+
+                <form  method="post" name="SignUp">
+
+                    <div class="top-row">
+                        <div class="field-wrap">
+                            <label>
+                                First Name<span class="req">*</span>
+                            </label>
+                            <input type="text" name="Fname" autocomplete="off" />
+                            <p id="fnameerror" class="errors"></p>
+                        </div>
+
+                        <div class="field-wrap">
+                            <label>
+                                Last Name<span class="req">*</span>
+                            </label>
+                            <input type="text" name="Lname" autocomplete="off"/>
+                            <p id="lnameerror" class="errors"></p>
+                        </div>
+                    </div>
+
+                    <div class="field-wrap">
+                        <label>
+                            Email Address<span class="req">*</span>
+                        </label>
+                        <input type="text" id="signupmail" name="email" autocomplete="off"/>
+                        <p id="emailerror" class="errors"></p>
+                    </div>
+
+                    <div class="field-wrap">
+                        <label>
+                            Set A Password<span class="req">*</span>
+                        </label>
+                        <input type="password" name="password" autocomplete="off"/>
+                        <p id="passerror" class="errors"></p>
+                    </div>
+
+                    <input type="button" value="submit" class="button button-block" onclick="checkSignUp()"/>
+
+                </form>
+
+            </div>
+
+            <div id="login">
+                <h1>Welcome Back!</h1>
+
+                <form action="./wait.html" method="post">
+
+                    <div class="field-wrap">
+                        <label>
+                            Email Address<span class="req">*</span>
+                        </label>
+                        <input type="email" id="email" autocomplete="off"/>
+                    </div>
+
+                    <div class="field-wrap">
+                        <label>
+                            Password<span class="req">*</span>
+                        </label>
+                        <input type="password" id="pass" autocomplete="off"/>
+                        <p id="password-errors"></p>
+                    </div>
+
+                    <p class="forgot"><a href="#">Forgot Password?</a></p>
+
+                    <button class="button button-block"/>Log In</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<script>
+    $('.form').find('input, textarea').on('keyup blur focus', function (e) {
+
+        var $this = $(this),
+            label = $this.prev('label');
+
+        if (e.type === 'keyup') {
+            if ($this.val() === '') {
+                label.removeClass('active highlight');
+            } else {
+                label.addClass('active highlight');
+            }
+        } else if (e.type === 'blur') {
+            if( $this.val() === '' ) {
+                label.removeClass('active highlight');
+            } else {
+                label.removeClass('highlight');
+            }
+        } else if (e.type === 'focus') {
+
+            if( $this.val() === '' ) {
+                label.removeClass('highlight');
+            }
+            else if( $this.val() !== '' ) {
+                label.addClass('highlight');
+            }
+        }
+
+    });
+
+    $('.tab a').on('click', function (e) {
+
+        e.preventDefault();
+
+        $(this).parent().addClass('active');
+        $(this).parent().siblings().removeClass('active');
+
+        target = $(this).attr('href');
+
+        $('.tab-content > div').not(target).hide();
+
+        $(target).fadeIn(600);
+
+    });
+</script>
+
+<script>
+    particlesJS.load('particles-js', 'particles.json', function() {
+        console.log('callback - particles.js config loaded');
+    });
+</script>
+
+<script>
+    var granimInstance = new Granim({
+        element: '#canvas-basic',
+        direction: 'custom',
+        customDirection: {
+            x0: '40%',
+            y0: '20%',
+            x1: '60%',
+            y1: '50%',
+        },
+        isPausedWhenNotInView: true,
+        states : {
+            "default-state": {
+                gradients: [
+                    ['#ff406f', '#ff5e62'],
+                    ['#f200e5', '#e6465b'],
+                    ['#ee9f12', '#f01c28']
+                ]
+            }
+        }
+    });
+</script>
+
+<script>
+    function checkSignUp() {
+
+        var a=namevalidate();
+        var b=lnamevalidate();
+        var c=emailvalidate();
+        var d=passwordvalidate();
+
+        if((a&&b&&c&&d)===true){
+            window.location.replace('wait.html');
+        }
+
+    }
+
+    function namevalidate() {
+
+        var name=document.SignUp.Fname.value;
+        name=name.split("");
+        var spl=['!','@','#','$','%','^','&','*'];
+        var flag=0;
+        if(document.SignUp.Fname.value===""||document.SignUp.Fname.value===null){
+            document.getElementById('fnameerror').innerHTML="Name Can't be empty";
+            return false;
+        }
+        if(document.SignUp.Fname.value.length>0){
+            for (var i=0;i<name.length;i++){
+                if((isNaN(name[i]))===false){
+                     flag=1;
+                    document.getElementById('fnameerror').innerHTML="Name Should not contain any characters";
+
+                    return false;
+                }
+            }
+            if(flag===0){
+                if(name.includes(spl)){
+                    document.getElementById('fnameerror').innerHTML="No characters are allowed";
+                    return false;
+
+                }
+                else {
+                    return true;
+                }
+            }
+
+        }
+
+        else {
+            return true;
+        }
+
+    }
+
+    function lnamevalidate() {
+        var name=document.SignUp.Lname.value;
+        name=name.split("");
+        var spl=['!','@','#','$','%','^','&','*'];
+        var flag=0;
+        if(document.SignUp.Lname.value===""||document.SignUp.Lname.value===null){
+            document.getElementById('lnameerror').innerHTML="Name Can't be empty";
+            return false;
+        }
+        if(document.SignUp.Lname.value.length>0){
+            for (var i=0;i<name.length;i++){
+                if((isNaN(name[i]))===false){
+                    flag=1;
+                    document.getElementById('lnameerror').innerHTML="Name Should not contain any characters";
+                    return false;
+                }
+
+            }
+            if(flag===0){
+                if(name.includes(spl)){
+                    document.getElementById('lnameerror').innerHTML="No characters are allowed";
+                    return false;
+
+                }
+                else {
+                    document.getElementById('lnameerror').innerHTML="";
+                    return true;
+                }
+            }
+
+        }
+
+        else {
+            document.getElementById('lnameerror').innerHTML="";
+            return true;
+        }
+
+
+    }
+
+    function emailvalidate() {
+        var a=document.getElementById('signupmail').value;
+        var check1=a.indexOf('@');
+        var check2=a.lastIndexOf('.');
+        if(check1<0){
+            document.getElementById('emailerror').innerHTML="Please enter a valid email";
+            return false;
+        }
+        else if(check2<check1){
+            document.getElementById('emailerror').innerHTML="Please enter a valid email";
+            return false
+        }
+
+        else{
+            document.getElementById('emailerror').innerHTML="";
+            return true;
+        }
+    }
+
+    function passwordvalidate() {
+        if(document.SignUp.password.value.length<5){
+            document.getElementById('passerror').innerHTML="Password should be 6 or more character long";
+            return false;
+        }
+        else {
+            return true;
+        }
+
+    }
+
+
+</script>
+</body>
+</html>
