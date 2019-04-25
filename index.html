@@ -25,7 +25,11 @@
             <div id="signup">
                 <h1>Sign Up for Free</h1>
 
+<<<<<<< HEAD
                 <form  method="post" name="SignUp">
+=======
+                <form action="#javascript;" method="post" name="SignUp" onsubmit="return checkSignUp()">
+>>>>>>> 966c5e1e2c24a63904f701608f2d9296a2fe0bbf
 
                     <div class="top-row">
                         <div class="field-wrap">
@@ -70,7 +74,7 @@
             <div id="login">
                 <h1>Welcome Back!</h1>
 
-                <form action="./wait.html" method="post">
+                <form action="#javascript;" method="post">
 
                     <div class="field-wrap">
                         <label>
@@ -183,8 +187,13 @@
         var c=emailvalidate();
         var d=passwordvalidate();
 
+<<<<<<< HEAD
         if((a&&b&&c&&d)===true){
             window.location.replace('wait.html');
+=======
+        if ((a&&b&&c&&d)===true){
+            window.location.replace('home.html');
+>>>>>>> 966c5e1e2c24a63904f701608f2d9296a2fe0bbf
         }
 
     }
