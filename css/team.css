@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Satisfy', cursive;
+    letter-spacing: 12px;
+    overflow-x: hidden;
+}
+section{
+    height: 100vh;
+    width: 100vw;
+}
+#particle-js{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+}
+.about-us{
+    text-align: center;
+    padding: 60px;
+}
+.about-us h1{
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 40px;
+}
+.border{
+    display: block;
+    margin: auto;
+    width: 60px;
+    height: 3px;
+    margin-bottom: 40px;
+}
+.f{
+    margin-bottom: 40px;
+}
+.f a{
+    display: inline-block;
+    margin:0 50px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border: 3px solid #f5af19;
+    border-radius: 50%;
+}
+.f a img{
+    width: 100%;
+    filter: grayscale(80%);
+    transition: 0.4s;
+}
+.f a:hover > img{
+    filter: none;
+}
+.section{
+    width: 600px;
+    margin: auto;
+    font-size: 20px;
+    color: black;
+    text-align: justify;
+    height: 0;
+    overflow: hidden;
+}
+.section p{
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+.section:target{
+    height: auto;
+}
+.name{
+    display: block;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+
+.funkytext{
+    color: #CC008A;
+}
+.spunkytext{
+    color: #FFCE00;
+}

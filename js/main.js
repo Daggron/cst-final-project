@@ -1,7 +1,7 @@
 function thanos() {
 
     setTimeout(function () {
-        window.location.replace("index.html");
+        window.location.replace("home.html");
 
     },3000)
 

@@ -28,7 +28,9 @@ header{
 
 header nav{
 }
-
+.navbar-scroll{
+    color: #e6891d;
+}
 nav ul{
     list-style: none;
     margin-left: 20%;

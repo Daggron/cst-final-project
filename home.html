@@ -25,17 +25,17 @@
     </div>
     <nav>
         <ul>
-            <li>
-                <a href="">Home</a>
+            <li class="navbar">
+                <a href="./home.html" class="navbar">Home</a>
             </li>
-            <li>
-                <a href="">About</a>
+            <li class="navbar">
+                <a href="#catalouge" class="navbar">About</a>
             </li>
-            <li>
-                <a href="">Places</a>
+            <li class="navbar">
+                <a href="./team.html" class="navbar" target="_blank">Team</a>
             </li>
-            <li>
-                <a href="">Books</a>
+            <li class="navbar">
+                <a href="./display.html" class="navbar">Book-Tour</a>
             </li>
         </ul>
     </nav>
@@ -338,6 +338,20 @@
 
 
 </script>
+<script>
 
+    $(function(){
+        var navbar = $('.navbar');
+
+        $(window).scroll(function(){
+            if($(window).scrollTop() <= 40){
+                navbar.removeClass('navbar-scroll');
+            } else {
+                navbar.addClass('navbar-scroll');
+            }
+        });
+    });
+
+</script>
 
 </html>
